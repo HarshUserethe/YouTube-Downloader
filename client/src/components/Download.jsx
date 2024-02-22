@@ -41,7 +41,7 @@ const Download = () => {
     try {
         if(videoUrl.length !== 0){
             setIsLoading(true);
-            const response = await axios.post('http://localhost:3000/video', {
+            const response = await axios.post('https://media-magnet-server-wb6d.onrender.com/video', {
                 url: videoUrl
                })
 
