@@ -44,7 +44,7 @@ const Instagram = () => {
 
       if(videoUrl.length !== 0){
   
-         await axios.get('http://localhost:3000/insta-downloader',{
+         await axios.get('https://media-magnet-server-wb6d.onrender.com/insta-downloader',{
           params: {
             url: videoUrl
           }         
