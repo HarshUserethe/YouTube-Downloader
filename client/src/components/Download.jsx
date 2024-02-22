@@ -70,7 +70,7 @@ const Download = () => {
 
       setIsLoading(true);
 
-       await axios.get('http://localhost:3000/download', {
+       await axios.get('https://media-magnet-server-wb6d.onrender.com/download', {
          params: {
            url: videoUrl,
            vidQuality: format.itag,
