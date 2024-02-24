@@ -6,14 +6,25 @@ import { useState } from "react";
 const Navigation = () => {
 
   const [open, setOpen] = useState(null);
+  const [display, setDisplay] = useState('none');
    
 const openMenu = () => {
-   setOpen("0%");
+
+  setDisplay("flex");
+   setTimeout(() => {
+    setOpen("0%");
+  }, 10)
+   
 
 }
 
 const closeMenu = () => {
   setOpen("-70%");
+  setTimeout(() => {
+    setDisplay("none");
+  }, 500)
+
+  
 
 }
 
@@ -30,7 +41,7 @@ const listHandler = () => {
         <img src={Logo} alt="" />
      </div>
      <i className="ri-menu-line" onClick={openMenu}></i> 
-     <div className="list" style={{right: `${open}`}}>
+     <div className="list" style={{right: `${open}`, display:`${display}`}}>
       <div className="closeTag">
       <i className="ri-close-line" onClick={closeMenu}></i>
       </div>
